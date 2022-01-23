@@ -11,64 +11,86 @@
             padding: 0;
         }
         body {
-            perspective: 1500px;
+            perspective: 500px;
         }
-        section {
+        ul {
+            margin: 100px auto;
+            width: 1200px;
+
+        }
+        ul li {
+            float: left;
+
+            margin: 0 20px;
+            width: 160px;
+            height: 60px;
+            line-height: 50px;
+            text-align: center;
+            list-style: none;
+
+        }
+        .box {
             position: relative;
-            margin: 500px auto;
-            width: 300px;
-            height: 206px;
+            width: 100%;
+            height: 100%;
             transform-style: preserve-3d;
-            animation: rotatephoto  10s linear;
-            background: url(img1.jpg) no-repeat;
+            transition: all .6s;
         }
-        section:hover {
-            animation-play-state: paused;
+        .box:hover {
+            transform: rotateX(90deg);
         }
-        @keyframes rotatephoto {
-            0% {
-                transform: rotateY(0);
-            }
-            100% {
-                transform: rotateY(360deg);
-            }
-        }
-        section div {
+        .front,
+        .back {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url(img.jpg) no-repeat;
+            color: #fff;
         }
-        section div:nth-child(1) {
-            transform: translateZ(300px);
+        .front {
+            background-color: pink;
+            z-index: 1;
+            transform: translateZ(30px);
         }
-        section div:nth-child(2) {
-            transform: rotateY(60deg) translateZ(300px);
-        }
-        section div:nth-child(3) {
-            transform: rotateY(120deg) translateZ(300px);
-        }
-        section div:nth-child(4) {
-            transform: rotateY(180deg) translateZ(300px);
-        }
-        section div:nth-child(5) {
-            transform: rotateY(240deg) translateZ(300px);
-        }
-        section div:nth-child(6) {
-            transform: rotateY(300deg) translateZ(300px);
+        .back {
+            background-color: skyblue;
+            transform: translateY(30px) rotateX(-90deg);
         }
     </style>
 </head>
 <body>
-    <section>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </section>
+    <ul>
+        <li>
+            <div class="box"><div class="front">1</div>
+            <div class="back">2</div></div>
+            
+        </li>
+        <li>
+            <div class="box"><div class="front">3</div>
+            <div class="back">4</div></div>
+            
+        </li>        
+        <li>
+            <div class="box"><div class="front">5</div>
+            <div class="back">6</div></div>
+            
+        </li>       
+        <li>
+            <div class="box"><div class="front">7</div>
+            <div class="back">8</div></div>
+            
+        </li>        
+        <li>
+            <div class="box"><div class="front">9</div>
+            <div class="back">10</div></div>
+            
+        </li>        
+        <li>
+            <div class="box"><div class="front">11</div>
+            <div class="back">12</div></div>
+            
+        </li>
+    </ul>
 </body>
 </html>
