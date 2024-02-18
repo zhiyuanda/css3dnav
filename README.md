@@ -5,7 +5,7 @@
 
 # 网页如下（CSS3d效果导航栏）：
 
-[css3dphoto](https://jiang-lijun.github.io/css3dnav/)
+https://zhiyuanda.github.io/css3dnav/
 
 # 网页代码如下：
 
